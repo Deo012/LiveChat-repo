@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "test": "mocha"
   },
-  "author": "",
+  "author": "Odjoumani Tayo Déo-Gracias Giscar Bonaventure",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.7.2",
+    "chai-http": "^5.0.0",
     "cors": "^2.8.5",
     "express": "^4.19.2",
     "mongoose": "^8.4.3"

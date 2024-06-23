@@ -11,8 +11,11 @@ app.post("/authenticate", async (req, res) =>{
     return res.json({username: username, secret: "sha256..."})
 });
 
-const uri = "mongodb://localhost:27017/dbLiveChat";
-mongoose.connect(uri);
+
+mongoose.connect("mongodb://localhost:27017/dbLiveChat", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
 const connection = mongoose.connection;
 connection.once('open', () =>{
     console.log("MongoDB connected sucessfully");
@@ -25,3 +28,5 @@ app.use("/users", usersRouter);
 app.listen(3001, ()=>{
     console.log("Serveur is running on port 3001");
 });
+
+module.exports = app;
