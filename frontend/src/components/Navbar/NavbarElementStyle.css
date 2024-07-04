@@ -1,0 +1,27 @@
+*{
+    font-size: 1.2rem;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    height: 4rem;
+    background-color: black;
+    color: white;
+    padding: 2rem;
+}
+ul{
+    list-style: none;
+}
+li{
+    display: inline-block;
+    padding-right: 2rem;
+}
+.navbar-container a{
+    text-decoration: none;
+    transition: background-color 0.5s ease;
+}
+.navbar-container a:hover{
+    background-color: gray;
+}

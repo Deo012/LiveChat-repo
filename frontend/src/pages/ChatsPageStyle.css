@@ -1,0 +1,25 @@
+.main{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+.contacts-area{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+.chat-area{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.bubble-area{
+    flex-grow: 1;
+    
+}
+.commenting-area{
+    display: flex;
+}
+.commenting-section{
+    width: 70%;
+}
