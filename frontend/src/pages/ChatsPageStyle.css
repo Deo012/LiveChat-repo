@@ -1,3 +1,6 @@
+:root{
+    --arrow-size: 16px;
+}
 .main{
     display: flex;
     width: 100vw;
@@ -22,4 +25,45 @@
 }
 .commenting-section{
     width: 70%;
+}
+.speech{
+    max-width: 600px;
+    border-radius: 10px;
+    background-color: #a53d38;
+    color: white;
+    font-size: 1.2em;
+    padding: 1rem;
+}
+.speech::after{
+    display: block;
+    content: "";
+    border: 15px solid transparent;
+}
+.speech.left::after{
+    width: 0; 
+    height: 0; 
+    border-top: var(--arrow-size) solid transparent;
+    border-bottom: var(--arrow-size) solid transparent;
+    border-left: var(--arrow-size) solid #a53d38;
+}
+.speech{
+    position: relative;
+    margin: 30px;
+}
+.speech.left::after{
+    position: absolute;
+    left: calc(100%);
+    top: calc(50% - var(--arrow-size));
+}
+.speech.right::after{
+    width: 0; 
+    height: 0; 
+    border-top: var(--arrow-size) solid transparent;
+    border-bottom: var(--arrow-size) solid transparent;
+    border-right: var(--arrow-size) solid #a53d38;
+}
+.speech.right::after{
+    position: absolute;
+    left: -31px;
+    top: calc(50% - var(--arrow-size));
 }

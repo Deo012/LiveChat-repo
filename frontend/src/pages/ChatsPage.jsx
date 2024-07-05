@@ -58,18 +58,20 @@ function createBuble(text){
     var bubbleArea = document.getElementsByClassName("bubble-area");
 
     makeDiv.innerHTML = text;
-    makeDiv.style.backgroundColor = "blue";
     makeDiv.style.maxWidth = "15rem";
+    makeDiv.className = "speech";
 
     containerDiv.className = "container";
     containerDiv.style.display = "block";
-    containerDiv.style.backgroundColor = "red";
+    //containerDiv.style.backgroundColor = "red";
     
     if(text.includes("1")){
         makeDiv.style.marginLeft = "auto";
+        makeDiv.className = "speech left";
     }
     else if(text.includes("2")){
         makeDiv.style.marginRight = "auto";
+        makeDiv.className = "speech right";
     }
     containerDiv.appendChild(makeDiv);
     
