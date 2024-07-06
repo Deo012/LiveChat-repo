@@ -1,5 +1,11 @@
 :root{
     --arrow-size: 16px;
+    --bubble-color: #2c2c32;
+    --left-bubble-start-color: #6e64f3;
+    --left-bubble-end-color:#bb4fe8;
+}
+body{
+    font: small-caps 16px/2 cursive;
 }
 .main{
     display: flex;
@@ -15,6 +21,7 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    background-color: #1a1a1e;
 }
 .bubble-area{
     flex-grow: 1;
@@ -23,46 +30,58 @@
 .commenting-area{
     display: flex;
 }
-.commenting-section{
-    width: 70%;
+.comment-section{
+    flex: 2 1 0;
+    background-color: #26272d;
+    padding: 0.5rem;
+    margin: 1rem 1rem 1.5rem 1.5rem;
+    border-radius: 5px;
+    color: #9b9b9c;
+}
+.sending-button{
+    flex: 0.2 1 0;
 }
 .speech{
     max-width: 600px;
     border-radius: 10px;
-    background-color: #a53d38;
+    background-color: var(--bubble-color);
     color: white;
-    font-size: 1.2em;
-    padding: 1rem;
+    font-size: 1em;
+    padding: 0.7rem;
+    box-shadow: 0 1px 20px rgb(14, 14, 14);
 }
 .speech::after{
     display: block;
     content: "";
     border: 15px solid transparent;
 }
-.speech.left::after{
+.speech.right::after{
     width: 0; 
     height: 0; 
     border-top: var(--arrow-size) solid transparent;
     border-bottom: var(--arrow-size) solid transparent;
-    border-left: var(--arrow-size) solid #a53d38;
+    border-left: var(--arrow-size) solid var(--bubble-color);
 }
 .speech{
     position: relative;
     margin: 30px;
 }
-.speech.left::after{
+.speech.right::after{
     position: absolute;
     left: calc(100%);
     top: calc(50% - var(--arrow-size));
 }
-.speech.right::after{
+.speech.left{
+    background-image: linear-gradient(to right, var(--left-bubble-start-color), var(--left-bubble-end-color));
+}
+.speech.left::after{
     width: 0; 
     height: 0; 
     border-top: var(--arrow-size) solid transparent;
     border-bottom: var(--arrow-size) solid transparent;
-    border-right: var(--arrow-size) solid #a53d38;
+    border-right: var(--arrow-size) solid var(--left-bubble-start-color);
 }
-.speech.right::after{
+.speech.left::after{
     position: absolute;
     left: -31px;
     top: calc(50% - var(--arrow-size));

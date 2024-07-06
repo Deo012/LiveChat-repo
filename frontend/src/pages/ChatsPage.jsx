@@ -8,16 +8,6 @@ import HomePage from "./HomePage";
 
 
 const ChatsPage = () => {
-    /*
-    useEffect(() =>{
-        const script = document.createElement("script");
-        script.src = HomePage;
-        script.async = true;
-        var bubbleArea = document.getElementsByClassName("bubble-area")[0];
-        
-        document.body.appendChild(script);
-    }, []);
-    */
 
     return (
         <div>
@@ -34,7 +24,7 @@ const ChatsPage = () => {
                         <h1>Bubbles</h1>
                     </div>
                     <div className="commenting-area">
-                        <input type="text" className="comment-section" placeholder="Comment here..."/>
+                        <input type="text" className="comment-section" placeholder="Comment here..." onKeyDown={onEnterKeyDownHandler}/>
                         <button className="sending-button" onClick={()=>getText(this)}>Send</button>
                     </div>
                 </div>
@@ -67,15 +57,21 @@ function createBuble(text){
     
     if(text.includes("1")){
         makeDiv.style.marginLeft = "auto";
-        makeDiv.className = "speech left";
+        makeDiv.className = "speech right";
     }
     else if(text.includes("2")){
         makeDiv.style.marginRight = "auto";
-        makeDiv.className = "speech right";
+        makeDiv.className = "speech left";
     }
     containerDiv.appendChild(makeDiv);
     
     document.getElementsByClassName("bubble-area")[0].appendChild(containerDiv);
+}
+
+const onEnterKeyDownHandler = e => {
+    if(e.keyCode == 13){
+        getText(this);
+    }
 }
 
 export default ChatsPage;
