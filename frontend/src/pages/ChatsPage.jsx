@@ -12,16 +12,21 @@ const ChatsPage = () => {
     return (
         <div>
             <NavBar />
-            <h1>Chat Page</h1>
             <div className="main">
 
                 <div className="contacts-area">
-                    <h1>Contacts</h1>
+                    <div className="friend-box">
+                        <img className="friend-profil-image" src="https://cdn.pixabay.com/photo/2016/03/28/12/35/cat-1285634_1280.png" alt="cat eyes"/>
+                        <div className="friend-info">
+                            <p className="friend-name">Test profil</p>
+                            <p className="friend-last-comment">Last text...</p>
+                        </div>
+                        <p className="friend-last-comment-time">Now</p>
+                    </div>
                 </div>
 
                 <div className="chat-area">
                     <div className="bubble-area">
-                        <h1>Bubbles</h1>
                     </div>
                     <div className="commenting-area">
                         <input type="text" className="comment-section" placeholder="Comment here..." onKeyDown={onEnterKeyDownHandler}/>
@@ -53,7 +58,6 @@ function createBuble(text){
 
     containerDiv.className = "container";
     containerDiv.style.display = "block";
-    //containerDiv.style.backgroundColor = "red";
     
     if(text.includes("1")){
         makeDiv.style.marginLeft = "auto";

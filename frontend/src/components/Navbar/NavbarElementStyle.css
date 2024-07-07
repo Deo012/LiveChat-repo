@@ -21,7 +21,37 @@ li{
 .navbar-container a{
     text-decoration: none;
     transition: background-color 0.5s ease;
+    position: relative;
 }
-.navbar-container a:hover{
-    background-color: gray;
+.navbar-container a::before{
+    display: block;
+    content: "";
+    position: absolute;
+    top: -0.5rem;
+    bottom: -0.5rem;
+    right: -0.5rem;
+    left: -0.5rem;
+    border-top: 1px solid rgb(168, 160, 160);
+    border-bottom: 1px solid rgb(168, 160, 160);
+    transform: scale(0, 1);
+    transition: transform ease-out 170ms;
+}
+.navbar-container a::after{
+    display: block;
+    content: "";
+    position: absolute;
+    top: -0.5rem;
+    bottom: -0.5rem;
+    left: -0.5rem;
+    right: -0.5rem;
+    border-right: 1px solid rgb(168, 160, 160);
+    border-left: 1px solid rgb(168, 160, 160);
+    transform: scale(1,0);
+    transition: transform ease-out 170ms;
+}
+.navbar-container a:hover::before{
+    transform: scale(1.1, 1);
+}
+.navbar-container a:hover::after{
+    transform: scale(1,1.1);
 }
