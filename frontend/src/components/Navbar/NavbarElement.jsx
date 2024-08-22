@@ -12,6 +12,7 @@ const NavBar = () => {
                     <li><Link to= "/">Home</Link></li>
                     <li><Link to= "/chatsPage">Chat Page</Link></li>
                     <li><Link to= "/authPage">Auth Page</Link></li>
+                    <li><Link to= "/catalogsPage">Catalog</Link></li>
                 </ul>
                 <div>
                     <li> <Link to= "/">Connexion</Link></li>
