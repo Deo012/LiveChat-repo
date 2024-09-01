@@ -1,0 +1,30 @@
+.catalogs-page{
+    overflow: hidden;
+}
+.user-box{
+    display: flex;
+    padding: 2rem;
+    margin: 2rem;
+    background-image: linear-gradient(45deg, gray, transparent);
+    border-radius: 5rem;
+    align-items: center;
+    transition: transform ease-out 300ms, linear-gradient ease-out 1000ms;
+}
+.user-box:hover{
+    transform: scale(1.06);
+    background-image: linear-gradient(to bottom right,gray, transparent);
+}
+.profil-image{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 3rem;
+    object-fit: fill;
+    overflow: hidden;
+}
+.infos{
+    margin-left: 3rem;
+}
+.user-button{
+    flex-grow: 2;
+    text-align: center;
+}

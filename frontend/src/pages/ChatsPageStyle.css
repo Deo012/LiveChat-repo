@@ -7,10 +7,9 @@
 body{
     font: small-caps 16px/2 cursive;
 }
-.main{
+.chats-page{
     display: flex;
-    width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 4rem);
 }
 .contacts-area{
     display: flex;
@@ -27,6 +26,7 @@ body{
 .bubble-area{
     flex-grow: 1;
     max-height: 80%;
+    overflow-x: hidden;
     overflow-y: scroll;
 }
 .commenting-area{

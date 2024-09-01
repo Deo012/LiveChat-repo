@@ -1,0 +1,90 @@
+.connexion-page-main{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+.username-div{
+    width: fit-content;
+    border-bottom: 2px solid black;
+}
+.mdp-div{
+    width: fit-content;
+    border-bottom: 2px solid black;
+}
+.get-started{
+    background-color: #ececec;
+    padding: 0.4rem;
+    border-radius: 1em;
+}
+.get-started:hover{
+    cursor: pointer;
+}
+.outer-area{
+    height: calc(100% - 4rem);
+    background-color: #ececec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.inner-area{
+    width: 90%;
+    height: 70%;
+    background-color: #ececec;
+    display: flex;
+    z-index: 1;
+    box-shadow: 1rem 1rem 2rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+.inner-area-left{
+    position: relative;
+    width: 30%;
+    background-color: #ececec;
+    overflow: hidden;
+}
+.inner-area-right{
+    width: 70%;
+    background-color: #ececec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.username-input, .mdp-input{
+    margin-left: 1rem;
+}
+.username-div, .mdp-div{
+    margin-bottom: 1rem;
+}
+.container-inputs > *{
+    font-size: 1rem;
+}
+.container-inputs{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.image-pattern-outer-absolute{
+    position : absolute;
+    top: 0;
+    left: 0;
+    width: 32vw;
+    height: 100%;
+}
+.image-pattern-outer{
+    height: 100%;
+    width: 100%;
+}
+.image-pattern-inner-absolute{
+    position: absolute;
+    height: 100vh;
+    width: 33vw;
+    top: -22%;
+    left: -22%;
+
+}
+.image-pattern-inner{
+    height: 100%;
+    width: 100%;
+}

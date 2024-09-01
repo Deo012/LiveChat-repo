@@ -1,9 +1,7 @@
 import React from "react";
 import NavBar from "../components/Navbar/NavbarElement";
-import { useEffect } from "react";
 import "./ChatsPageStyle.css";
-import { createElement } from "react";
-import HomePage from "./HomePage";
+
 
 
 
@@ -12,7 +10,7 @@ const ChatsPage = () => {
     return (
         <div>
             <NavBar />
-            <div className="main">
+            <div className="chats-page">
 
                 <div className="contacts-area">
                     <div className="friend-box">
